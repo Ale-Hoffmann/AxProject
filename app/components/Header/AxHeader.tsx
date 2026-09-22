@@ -1,10 +1,11 @@
 import { AppBar, Toolbar, Typography, Button, IconButton, Box } from '@mui/material';
+import Image from 'next/image';
 import React from 'react'
 
 const AxHeader = () => {
   return (
-      <AppBar position="static" sx={{ backgroundColor: 'white' }}>
-      <Toolbar>
+      <AppBar position="static"  color="secondary" >
+      <Toolbar sx={{ color: "secondary.main" }}>
         {/* Menu Icon for Mobile Navigation */}
         <IconButton
           size="large"
@@ -16,11 +17,18 @@ const AxHeader = () => {
         </IconButton>
 
         {/* Website Title */}
-        <Typography variant="h6" component="div" sx={{ flexGrow: 1 , color: "black"}}>
+       <Image
+          src="/AxImages/AxTemporaryLogo.jpg"
+          alt="AX Serigrafia Logo"
+          width={58}
+          height={58}
+          style={{ borderRadius: '50%' }}
+        />
+        <Typography variant="h6" component="div" sx={{flex:'1', color: "black", paddingLeft: "10px"}}>
           AX Serigrafia
         </Typography>
         <Box sx={{ display: { xs: 'none', sm: 'block', color: "black"} }}>
-          <Button color="inherit">Orçamento</Button>
+          <Button color="inherit">Simule seu pedido</Button>
         </Box>
       </Toolbar>
     </AppBar>

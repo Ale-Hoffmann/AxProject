@@ -4,7 +4,7 @@ import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 import { newtheme } from './theme';
-import AxHeader from './components/AxHeader';
+import AxHeader from './components/Header/AxHeader';
 
 export default function Providers({
   children,
