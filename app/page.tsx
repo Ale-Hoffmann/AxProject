@@ -6,6 +6,8 @@ import AxHeader from "./components/Header/AxHeader";
 import { newtheme } from "./theme";
 import Carousel from "./components/Body/Carousel";
 import InfoPanels from "./components/Body/InfoPanels";
+import InfoCard from "./components/Body/InfoCard";
+import TalkToUsBtn from "./components/Body/TalkToUsBtn";
 
 
 export default function Home() {
@@ -15,7 +17,15 @@ export default function Home() {
     </Container>
     <Carousel></Carousel>
       
-    <Container disableGutters sx={{bgcolor: "secondary.main" }}><InfoPanels></InfoPanels></Container>
+    <Container disableGutters sx={{bgcolor: "secondary.main" }}>
+      <InfoPanels></InfoPanels>
+      <InfoCard 
+      title="esse é o mini titulo"
+      subtitle=" aqui vai o textinhooooooo"
+      imagePath="/AxImages/regataTemp.jpg" ></InfoCard>
+      <TalkToUsBtn></TalkToUsBtn>
+    </Container>
+
     </div>
   )
 }

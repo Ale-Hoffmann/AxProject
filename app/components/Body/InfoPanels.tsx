@@ -2,7 +2,7 @@
 import { Box, Paper, Typography } from '@mui/material'
 import { useState } from 'react';
 import React from 'react'
-import PanelsRouter from './PanelsRouter'
+import PanelsRouter from './InfoPanel/PanelsRouter'
 import Image from 'next/image';
 
 
@@ -28,9 +28,9 @@ const InfoPanels = () => {
 
     <PanelsRouter selecionado={selecionado} onSelect={setSelecionado}></PanelsRouter>
 
-     <Box sx={{ position: 'relative', height: '100vh' }}>
+     <Box sx={{ position: 'relative', height: '100%' , flex:'1'}}>
       {selecionado !== null && (
-        <Box sx={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: 2 }}>
+        <Box sx={{  top: 0, left: 0, width: '100%', height: '100%', zIndex: 2 }}>
           <Image src={selecionado} alt="Selecionado" fill style={{ objectFit: 'cover' }} />
         </Box>
       )}
