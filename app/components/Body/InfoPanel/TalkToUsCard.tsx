@@ -1,24 +1,31 @@
-import { Box, Paper, Typography } from '@mui/material'
+import { Box, Paper, Slide, Typography } from '@mui/material'
 import Image from 'next/image'
 import React from 'react'
 
-const TalkToUsCard = () => {
+interface TalkToUsCardProps{
+    cardVisible : boolean;
+}
+
+const TalkToUsCard = ({cardVisible}: TalkToUsCardProps) => {
   return (
-    <Paper sx={{
+<Slide direction="left" in={cardVisible} mountOnEnter unmountOnExit>
+
+    <Paper elevation={16} sx={{
         height:'500px',
         width:'300px',
         display:'flex',
         flexDirection:'column',
         alignItems:'center',
-        borderRadius:'35px',
-        bgcolor:"primary.main"}}>
-
+        borderRadius:'12px',
+        bgcolor:"primary.main",
+        position:'relative'}}>
+            
             <Box sx={{
-            flex:'1',
-            display:'flex',
-            flexDirection:'column',
-            alignItems:'center',
-            justifyContent:'center'}}>
+                flex:'1',
+                display:'flex',
+                flexDirection:'column',
+                alignItems:'center',
+                justifyContent:'center'}}>
                 <Typography variant='h5' sx={{color:'white'}}> para contatar Ax</Typography>
                 <Typography variant='h5' sx={{color:'white', fontWeight:'bold'}}>(51) 98922-4500</Typography>
             </Box>
@@ -28,17 +35,18 @@ const TalkToUsCard = () => {
                 flexDirection:'column',
                 alignItems:'center',
                 justifyContent:'center',
-                bgcolor:'secondary.main'}}>
+                bgcolor:'secondary.main',
+                borderRadius:'12px'}}>
 
                 <Paper sx={{display:'flex', flexDirection:'row', flex:'1'}}>
-                    <Image src="" alt=" " height ={10} width={10}></Image>
                     <Box sx={{display:'flex', flexDirection:'column'}}>
                         <Typography>textoTeste</Typography>
-                        <Typography>AAAAAAAAAAAAAAAAA</Typography>
+                        <Typography>AAAA</Typography>
                     </Box>
                 </Paper>
             </Box>
     </Paper>
+</Slide>
   )
 }
 
