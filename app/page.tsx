@@ -8,6 +8,7 @@ import Carousel from "./components/Body/Carousel";
 import InfoPanels from "./components/Body/InfoPanels";
 import InfoCard from "./components/Body/InfoCard";
 import TalkToUsBtn from "./components/Body/TalkToUsBtn";
+import Footer from "./components/Footer/Footer";
 
 
 export default function Home() {
@@ -25,6 +26,7 @@ export default function Home() {
       imagePath="/AxImages/regataTemp.jpg" ></InfoCard>
       <TalkToUsBtn></TalkToUsBtn>
     </Container>
+    <Footer></Footer>
 
     </div>
   )
