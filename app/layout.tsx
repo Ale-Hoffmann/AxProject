@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
@@ -22,9 +23,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="pt-br">
       <body>
-        <Providers>
-          {children}
-        </Providers>
+        <AppRouterCacheProvider>  
+          <Providers>
+            {children}
+          </Providers>
+        </AppRouterCacheProvider>
         </body>
     </html>
   );
